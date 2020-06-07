@@ -33,14 +33,14 @@ class MainActivity : AppCompatActivity() {
                 // We'll output the result upto two decimal places only
                 result.text = "%.2f".format(res) + "\nYou are " + BmiRes(res)
                 // i want to print the above info in my Log
-                Log.i("message", "+++Height is ${h}, Weight is ${w},BMI is${result.text}")
+                Log.i("message", "+++Height is ${h}, Weight is ${w},BMI is${result.text}")  // 1) Concept of Kotlin :- String templates
             }
         }
     }
 
-    fun BmiRes(res: Double): String {
+    fun BmiRes(res: Double): String {  //  2) Concept of Kotlin :- Named Parameters
         var ans = ""
-        when (res) {
+        when (res) {  // 3) Concept of Kotlin :- Conditional statements(when)
             in 1..18.4.toInt() -> ans = "Underweight"
             in 18.5.toInt()..24.8.toInt() -> ans = "Normal"
             in 25..29.9.toInt() -> ans = "Overweight"
